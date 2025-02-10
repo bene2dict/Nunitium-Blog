@@ -1,0 +1,111 @@
+
+
+.article-desc {
+    width: 40%;
+    margin: 3rem auto;
+}
+@media screen and (max-width: 1224px) {
+    .article-desc {
+        width: 90%;
+    }
+}
+.article-desc > h1 {
+    text-align: center;
+}
+.author-tag-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #1c1c1c50;
+}
+.desc {
+    margin-bottom: 10rem;
+}
+.author-date {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+.about-the-author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+@media screen and (max-width: 500px) {
+    .about-the-author {
+        display: flex;
+        margin: 10rem auto;
+    }
+}
+.authors-image-and-description {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+@media screen and (max-width: 500px) {
+    .authors-image-and-description {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.authors-image-and-description img {
+    width: 200px;
+    height: 200px;
+}
+@media screen and (max-width: 500px) {
+    .authors-image-and-description img {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
+.posts-navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15rem;
+}
+@media screen and (max-width) {
+    .posts-navigator {
+        margin: 0;
+    }
+}
+.previous-post, .next-post {
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+    cursor: pointer;
+}
+.previous-post-title, .next-post-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    font-size: 14px;
+}
+.previous-post-title p:nth-child(2), .next-post-title p:nth-child(2) {
+    font-weight: 700;
+}
+.next-post img, .previous-post img {
+    height: 100px;
+    width: 100px;
+}
+.next-post img {
+    margin-right: -1rem;
+}
+.previous-post img {
+    margin-left: -1rem;
+}

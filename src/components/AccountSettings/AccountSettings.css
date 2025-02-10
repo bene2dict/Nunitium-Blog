@@ -1,0 +1,126 @@
+.account-settings-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3rem;
+}
+.profile-image-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+    .profile-image-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.profile-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.profile-update-button button {
+    width: 100px;
+    height: 30px;
+    border: 2px solid #1c1c1c;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* justify-content: space-between; */
+    margin: 3rem;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 500px) {
+    .profile-details {
+        margin: 0;
+    }
+}
+.form-wrapper form {
+    width: 100%;
+    max-width: 1000px; /* Optional: Limit form width */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Spacing between elements */
+}
+
+.name-email, .city-state {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* Add spacing between the input containers */
+    box-sizing: border-box;
+}
+@media screen and (max-width: 500px) {
+    .name-email, .city-state {
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+.name-input-container, 
+.email-input-container, 
+.city-input-container, 
+.state-input-container {
+     flex: 1; /* Make each input take equal width */
+    display: flex;
+    flex-direction: column;
+}
+
+.address-input-container {
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+}
+
+button.update {
+    width: 100%; /* Button takes full width */
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button.update:hover {
+    background-color: #fff;
+    color: #1c1c1c;
+    border: 2px solid #1c1c1c;
+}
+
+.profile-details .form-wrapper form label {
+    margin-bottom: 0.5rem; /* Space between label and input */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.profile-details .form-wrapper form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.profile-details .form-wrapper form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

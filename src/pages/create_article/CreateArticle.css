@@ -1,0 +1,139 @@
+.create-article-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+.create-article-container h3 {
+    text-align: center;
+    font-size: 20px;
+    margin: 2rem 0;
+}
+.create-article-container .article-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    height: 70vh;
+}
+@media screen and (max-width: 500px) {
+    .create-article-container .article-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.create-article-container .article-container .img-container {
+    background: #1c1c1c;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 1224px) {
+    .create-article-container .article-container .img-container {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .create-article-container .article-container .img-container {
+        width: 100%;
+    }
+}
+
+.create-article-container .article-container .img-container img {
+    width: 150px;
+    height: 150px;
+}
+
+.create-article-container .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1224px) {
+    .create-article-container .form-container {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .create-article-container .form-container {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.create-article-container .form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.create-article-container .form-container form label {
+    font-weight: 700;
+}
+
+.create-article-container .form-container form .title {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-article-container .form-container form .title input {
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #1c1c1c50;
+    outline: none;
+}
+
+.create-article-container .form-container form .title input:focus {
+    border-bottom-color: #1c1c1c; 
+}
+
+.create-article-container .form-container form .description {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+form .categories {
+    font-weight: 200;
+}
+
+.quill {
+    height: 60%; 
+}
+
+.quill-editor {
+    height: 100%; 
+    overflow-y: auto;
+}
+.ql-editor {
+    padding: 8px !important;
+}
+.ql-toolbar.ql-snow {
+    border: 1px solid #1c1c1c !important;
+}
+.ql-container.ql-snow {
+    border: 1px solid #1c1c1c !important;
+}
+
+.create-article-container .form-container form > .create-button button {
+    height: 40px;
+    width: 135px;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 2px solid #1C1C1C;
+    cursor: pointer;
+}

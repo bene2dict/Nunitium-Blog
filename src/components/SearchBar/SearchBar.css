@@ -1,0 +1,25 @@
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  .search-bar input {
+    width: 400px;
+    height: 40px;
+    padding: 0.5rem 2rem 0.5rem 2.5rem;
+    border: 2px solid #1c1c1c;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .search-bar .material-symbols-outlined {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #1c1c1c;
+  }

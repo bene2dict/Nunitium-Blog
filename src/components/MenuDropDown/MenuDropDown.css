@@ -1,0 +1,44 @@
+.dropdown {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1224px) {
+    .dropdown {
+        width: 100px;
+        z-index: 999;
+    }
+}
+@media (max-width: 500px) {
+    .dropdown {
+        width: 100px;
+        z-index: 999;
+    }
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.profile span.material-symbols-outlined {
+    color: #1c1c1c;
+    font-size: 40px;
+}
+@media (max-width: 1224px) {
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-left: -5rem;
+    }
+}
+@media (max-width: 500px) {
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,13 @@
+.articles-wrapper .post-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 500px) {
+    .articles-wrapper .post-container {
+        width: 95%;
+    }
+}

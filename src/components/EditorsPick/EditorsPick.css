@@ -1,0 +1,120 @@
+.editor-pick-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+@media (max-width: 1224px) {
+    .editor-pick-wrapper {
+        margin: 0;
+        width: 100%;
+    }
+}
+.editor-pick-wrapper .title-wrapper {
+    text-align: center;
+    margin: 4rem;
+}
+.editor-pick-wrapper .title-wrapper h1 {
+    margin-bottom: 15px;
+}
+.editor-pick-wrapper .title-underline {
+    background-color: #1c1c1c;
+    width: 15%;
+    height: 3px;
+    margin: 0 auto;
+    border: none;
+}
+/* .posts-wrapper {
+
+} */
+.editor-pick-wrapper .post-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin: 2rem;
+    height: 250px;
+}
+@media (max-width: 1224px) {
+    .editor-pick-wrapper .post-wrapper {
+        width: 70%;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1024px) {
+    .editor-pick-wrapper .post-wrapper {
+        width: 70%;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+}
+.editor-pick-wrapper .image-wrapper img {
+    width: 371px;
+    height: 250px;
+}
+@media (max-width: 1224px) {
+    .editor-pick-wrapper .image-wrapper img {
+        width: 200px;
+        height: 200px;
+    }
+}
+.editor-pick-wrapper .post-desc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-width: 1224px) {
+    .editor-pick-wrapper .post-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: start;
+    }
+}
+.editor-pick-wrapper .post-desc h1 {
+    margin-top: -10px;
+    margin: 0;
+}
+@media (max-width: 1224px) {
+    .editor-pick-wrapper .post-desc h1 {
+        font-size: 14px;
+    }
+}
+.editor-pick-wrapper .post-desc h3 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #1c1c1c52;
+    margin: 0;
+}
+@media (max-width: 1224px) {
+    .editor-pick-wrapper .post-desc h3 {
+        font-size: 10px;
+    }
+}
+.editor-pick-wrapper .name-date {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(183, 183, 183);
+    margin-top: 0;
+}
+.editor-pick-wrapper .post-desc p {
+    font-family: 'Open Sans', serif;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin: 0;
+}
+@media (max-width: 1224px) {
+    .editor-pick-wrapper .post-desc p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 500px) {
+    .editor-pick-wrapper .post-desc p {
+        font-size: 9px;
+    }
+}

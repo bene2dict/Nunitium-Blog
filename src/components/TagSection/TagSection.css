@@ -1,0 +1,22 @@
+.tag-section-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+}
+@media (max-width: 1224px) {
+    .tag-section-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+@media (max-width: 1224px) {
+    .tag-list-wrapper {
+        height: auto;
+        margin: 15rem 0;
+    }
+}

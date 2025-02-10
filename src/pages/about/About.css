@@ -1,0 +1,355 @@
+
+
+.about-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: 10rem auto;
+}
+@media screen and (max-width: 1224px) {
+    .about-intro  {
+       width: 80%;
+       margin: 10rem auto;
+    }
+}
+@media screen and (max-width: 1224px) {
+    .about-intro p {
+       font-size: 12px;
+       text-align: center;
+    }
+}
+.about-desc {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1224px) {
+    .about-desc {
+        width: 100%;
+        margin: 0;
+    }
+}
+.about-desc img {
+    width: 100%;
+    height: 2000px;
+}
+@media screen and (max-width: 1224px) {
+    .about-desc img {
+        width: 100%;
+        height: 1220px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .about-desc img {
+        width: 100vw;
+        height: 1000px;
+    }
+}
+.stories {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    right: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7rem;
+    color: white;
+}
+@media screen and (max-width: 1224px) {
+    .stories  {
+        position: absolute;
+        width: 80%;
+        top: 100px;
+        left: 10%;
+        right: 0;
+        gap: 3rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .stories  {
+        width: 82%;
+        position: absolute;
+        top: 40px;
+        left: 15px;
+        right: 41%;
+        gap: 1rem;
+    }
+}
+.stories-desc {
+    width: 50%;
+}
+@media screen and (max-width: 1224px) {
+    .stories-desc {
+        flex: 1;
+        width: 70%;
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .stories-desc {
+        flex: 1;
+        width: 100%;
+        margin-left: 1rem;
+    }
+}
+.stories-desc h1, .consortium-desc h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+@media screen and (max-width: 1224px) {
+    .stories-desc h1, .consortium-desc h1 {
+        font-size: 20px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .stories-desc h1, .consortium-desc h1 {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+.stories-desc p, .consortium-desc p {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1224px) {
+    .stories-desc p, .consortium-desc p {
+        font-size: 7px;
+    }
+}
+.stories img {
+    width: 500px;
+    height: 400px;
+}
+@media screen and (max-width: 1224px) {
+    .stories img {
+        width: 300px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .stories img {
+        width: 200px;
+        height: 150px;
+    }
+}
+.consortium {
+    position: absolute;
+    top: 500px;
+    left: 30%;
+    right: 70%;
+    width: 70%;
+    color: white;
+}
+@media screen and (max-width: 1224px) {
+    .consortium {
+        position: absolute;
+        top: 241px;
+        left: 27%;
+        width: 40%;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .consortium {
+        position: absolute;
+        top: 241px;
+        left: 27%;
+        width: 200px;
+        height: 150px;
+    }
+}
+.consortium-desc {
+    width: 50%;
+}
+@media screen and (max-width: 1224px) {
+    .consortium-desc {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .consortium-desc {
+        width: 100%;
+    }
+}
+.consortium-desc img {
+    width: 500px;
+    height: 400px;
+}
+@media screen and (max-width: 1224px) {
+    .consortium-desc img {
+        width: 300px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .consortium-desc img {
+        width: 200px;
+        height: 150px;
+    }
+}
+.moments {
+    position: absolute;
+    bottom: 500px;
+    left: 20%;
+    right: 80%;
+    width: 80%;
+    color: white;
+}
+@media screen and (max-width: 1224px) {
+    .moments {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .moments {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 300px;
+    }
+}
+.moments-desc {
+    width: 50%;
+}
+@media screen and (max-width: 1224px) {
+    .moments-desc {
+        width: 60%;
+        margin-left: 10rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .moments-desc {
+        width: 70%;
+        margin-left: 4rem;
+    }
+}
+.moments-desc h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+@media screen and (max-width: 1224px) {
+    .moments-desc h1 {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1224px) {
+    .moments-desc p {
+       font-size: 10px;
+    }
+}
+.carousel {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
+@media screen and (max-width: 1224px) {
+    .carousel {
+        right: 22px;
+    }
+}
+.carousel img {
+    width: 800px;
+    height: 250px;
+}
+@media screen and (max-width: 1224px) {
+    .carousel img {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .carousel img {
+        width: 300px;
+        height: 150px;
+    }
+}
+.about-desc-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 30%;
+    margin: 10rem auto;
+    text-align: center;
+}
+@media screen and (max-width: 1224px) {
+    .about-desc-more {
+       width: 80%;
+    }
+}
+.about-desc-more h1 {
+    font-size: 30px;
+}
+@media screen and (max-width: 1224px) {
+    .about-desc-more h1 {
+       font-size: 18px;
+    }
+}
+@media screen and (max-width: 1224px) {
+    .about-desc-more p {
+       font-size: 12px;
+    }
+}
+.about-footer {
+    background-color: #1c1c1c;
+    color: white;
+    height: 20rem;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1224px) {
+    .about-footer  {
+       width: 100%;
+       height: auto;
+    }
+}
+.about-footer-desc {
+    width: 40%;
+    text-align: center;
+}
+@media screen and (max-width: 1224px) {
+    .about-footer-desc  {
+       width: 100%;
+    }
+}
+.about-footer-desc h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+@media screen and (max-width: 1224px) {
+    .about-footer h1 {
+       font-size: 20px;
+    }
+}
+.about-footer-desc p {
+    font-size: 16px;
+    font-weight: 400;
+}
+@media screen and (max-width: 1224px) {
+    .about-footer-desc p {
+       font-size: 12px;
+       margin: 0 auto;
+       width: 70%;
+    }
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+.socials img {
+    cursor: pointer;
+}

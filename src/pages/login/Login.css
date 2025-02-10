@@ -1,0 +1,78 @@
+.login-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading {
+    text-align: center;
+}
+
+/* Form css */
+.form-wrapper {
+    
+}
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 400px;
+}
+.input-container {
+    position: relative;
+    width: 100%;  
+  }
+  .input-container .material-symbols-outlined {
+    color: #1c1c1c;
+    font-size: 25px;
+  }
+  
+  .input-container input {
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 50px;
+    padding-left: 50px; 
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .placeholder-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;  
+    transform: translateY(-50%);
+    color: #1c1c1c50;
+    pointer-events: none;  
+    transition: opacity 0.3s ease;
+  }
+  
+  .input-container input:focus + .placeholder-icon,
+  .input-container input:not(:placeholder-shown) + .placeholder-icon {
+    opacity: 0;  
+  }
+  form .login-button button {
+    height: 40px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 14px;
+    border: 2px solid #1C1C1C;
+    cursor: pointer;
+}
+.register-forgot-password-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.register-forgot-password-wrapper p a, .register-forgot-password-wrapper a {
+    color: blue;
+}
+.register-forgot-password-wrapper p a {
+    padding-left: 5px;
+}
+  

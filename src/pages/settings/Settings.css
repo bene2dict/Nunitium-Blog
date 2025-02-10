@@ -1,0 +1,23 @@
+
+.dashboard-menu ul div {
+    cursor: pointer;
+    width: auto;
+    list-style-type: none;
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.setting-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3rem;
+}
+@media screen and (max-width: 500px) {
+    .setting-selected {
+        margin: 0 1rem;
+    }
+}
+
