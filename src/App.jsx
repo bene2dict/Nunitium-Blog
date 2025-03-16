@@ -10,8 +10,6 @@ import Dashboard from "./pages/dashboard/Dashboard"
 import Profile from "./pages/profile/Profile"
 import Settings from "./pages/settings/Settings"
 import CreateArticle from "./pages/create_article/CreateArticle"
-import ForgotPassword from "./pages/forgot-password/ForgotPassword"
-import SearchPage from "./pages/SearchPage/SearchPage"
 import '@fontsource/material-symbols-outlined';
 import PrivateLayout from "./layout/protectedLayout/privateLayout"
 import EditArticle from "./pages/editArticle/EditArticle"
@@ -48,10 +46,6 @@ function App() {
         {
           path: "/articles",
           element: <Articles />
-        },
-        {
-          path: "/search-page",
-          element: <SearchPage />
         }
       ]
     },
@@ -70,10 +64,6 @@ function App() {
         {
           path: "/dashboard",
           element: <Dashboard />
-        },
-        {
-          path: "/forgot-password",
-          element: <ForgotPassword />
         },
         {
           path: "/create-article",

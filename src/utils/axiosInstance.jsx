@@ -3,7 +3,7 @@ import { isTokenExpired } from "./isTokenExpired";
 
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000/api", 
+  baseURL: "https://nunitium-blog-backend.onrender.com/api", 
 });
 
 

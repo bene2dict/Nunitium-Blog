@@ -33,7 +33,7 @@ const Signup = () => {
 
 
     try {
-      const response = await axios.post("http://localhost:4000/api/users/register", data, {
+      const response = await axios.post("https://nunitium-blog-backend.onrender.com/api/users/register", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -42,7 +42,7 @@ const Signup = () => {
       const result =  response.data;
       console.log(result);
       
-      if (response.status === 201) {
+      if (response) {
         alert("Registration successful!");
         navigate("/login"); 
       } else {

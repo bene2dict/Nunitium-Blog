@@ -1,7 +1,6 @@
 import './Dropdown.css';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
-import profilePic from "../../assets/Profile-Picture.png";
+import {  useNavigate } from "react-router-dom";
 import AppContext from '../../context/AppContext';
 // import { useMediaQuery } from 'react-responsive';
 

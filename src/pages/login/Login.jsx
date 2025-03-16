@@ -36,14 +36,14 @@ const Login = () => {
 
 
     try {
-      const response = await axios.post("http://localhost:4000/api/users/login", data, {
+      const response = await axios.post("https://nunitium-blog-backend.onrender.com/api/users/login", data, {
         headers: {
           "Content-Type": "application/json",
         },
       });
 
       const result = response.data;
-      if (response.statusText === "OK") {
+      if (response) {
         console.log(result)
         const token = response.data.token;
         const user = response.data.userData;
