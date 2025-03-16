@@ -10,7 +10,7 @@ import MenuDropDown from "../MenuDropDown/MenuDropDown";
 
 
 const Navbar = () => {
-  const tablet = useMediaQuery({ query: '(max-width: 1224px)' })
+  const tablet = useMediaQuery({ query: '(max-width: 1224px)' });
   const bigScreen = useMediaQuery({ query: '(min-width: 1225px)' });
 
   const {  currentUser } = useContext(AppContext);
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const route = location.pathname.split("/")[1];
 
-
+console.log(currentUser);
 
   return (
     <div className="navbar">
@@ -34,11 +34,9 @@ const Navbar = () => {
         {bigScreen &&
           <ul className="menu">
             <>
-
               <Link to="/"><li>Home</li></Link>
               <Link to="/about"><li>About</li></Link>
               <Link to="/articles"><li>Articles</li></Link>
-
             </>
           </ul>}
 
@@ -48,7 +46,6 @@ const Navbar = () => {
             {
               currentUser ? (
                 <div className="login-active">
-
                   <Dropdown />
                 </div>
               ) : (
@@ -65,24 +62,16 @@ const Navbar = () => {
             ?
             (
               <div className="login-active">
-                {/* <Link to="/settings?notifications=notifications">
-                  <span className="material-symbols-outlined">notifications</span>
-                </Link> */}
                 <Dropdown />
               </div>
             )
             :
             (
               <>
-
-                <div className="search-wrapper">
-                  <Link to="/search-page">
-                    <span className="material-symbols-outlined">search</span>
-                  </Link>
-                </div>
                 <Link to={`${route === 'login' ? '/register' : '/login'}`} className="login-button">
                   <button>{route === 'login' ? 'Register' : 'Login'}</button>
                 </Link>
+
               </>
             )}
         </div>

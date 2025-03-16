@@ -9,7 +9,7 @@ import AppContext from '../../context/AppContext';
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { logOut } = useContext(AppContext);
+  const { logOut, currentUser } = useContext(AppContext);
 
   // const tablet = useMediaQuery({ query: '(max-width: 1224px)' })
   // const bigScreen = useMediaQuery({ query: '(min-width: 1225px)' });
@@ -63,21 +63,24 @@ const Dropdown = () => {
     { option: 'Sign out' }
   ];
 
+//  const {user_img} = currentUser;
+
+//  console.log(JSON.parse(currentUser))
+
 
   return (
     <div className="dropdown" ref={dropdownRef}>
       <div className="profile">
+        <div style={{
+          width: "100%",
+          flex: 1
+        }}></div>
 
 
-        <Link to="/search-page">
-          <span className="material-symbols-outlined">search</span>
-        </Link>
-        <Link to="/settings?notifications=notifications">
-          <span className="material-symbols-outlined">notifications</span>
-        </Link>
-
-
-        <img src={profilePic} alt="profile picture" onClick={toggleDropdown} />
+        <img src={currentUser && currentUser.user_img} alt="profile picture" onClick={toggleDropdown} style={{
+          borderRadius: "50%",
+          justifySelf: "flex-end"
+        }} />
       </div>
 
       {isOpen && (

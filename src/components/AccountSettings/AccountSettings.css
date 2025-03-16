@@ -27,10 +27,31 @@
     height: 100px;
     border-radius: 50%;
 }
+p.upload-image {
+    font-size: 13px;
+}
+
+p.image-title {
+    font-size: 11px;
+    word-wrap: break-word;  /* Allows words to wrap */
+    overflow-wrap: break-word; /* Ensures long words break */
+    white-space: normal; /* Allows text to wrap to the next line */
+    max-width: 200px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    p.image-title {
+        font-size: 12px;
+        word-wrap: break-word;  /* Allows words to wrap */
+        overflow-wrap: break-word; /* Ensures long words break */
+        white-space: normal; /* Allows text to wrap to the next line */
+        max-width: 300px;
+    }
+}
 
 
 .profile-update-button button {
-    width: 100px;
+    width: 120px;
     height: 30px;
     border: 2px solid #1c1c1c;
     border-radius: 5px;
@@ -61,7 +82,7 @@
 .name-email, .city-state {
     display: flex;
     justify-content: space-between;
-    gap: 2rem; /* Add spacing between the input containers */
+    gap: 1.5rem; /* Add spacing between the input containers */
     box-sizing: border-box;
 }
 @media screen and (max-width: 500px) {
@@ -72,7 +93,7 @@
 }
 
 .name-input-container, 
-.email-input-container, 
+.username-input-container, 
 .city-input-container, 
 .state-input-container {
      flex: 1; /* Make each input take equal width */
@@ -80,7 +101,7 @@
     flex-direction: column;
 }
 
-.address-input-container {
+.email-input-container {
     width: 100%; /* Full width */
     display: flex;
     flex-direction: column;

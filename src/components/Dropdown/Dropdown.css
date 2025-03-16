@@ -22,7 +22,7 @@
   
   .dropdown-menu {
     position: absolute;
-    top: 10;
+    top: 40px;
     right: 5px;
     width: 200px;
     height: auto;
@@ -34,6 +34,13 @@
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+  }
+  @media screen and (min-width: 1439px) {
+    .dropdown-menu {
+      top: 40px;
+      right: 30px;
+    }
   }
   .profile-name {
     display: flex;
@@ -46,7 +53,6 @@
   .profile-name p {
     margin: 0;
     padding-left: 2rem;
-
   }
 
   hr {

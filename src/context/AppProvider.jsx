@@ -10,12 +10,16 @@ const AppProvider = ({ children }) => {
   const [searched, setSearched] = useState(true);
   const [currentUser, setCurrentUser] = useState(null);
   const [blogs, setBlogs] = useState([]);
+  const [editArticle, setEditArticle] = useState(false);
 
 
   //check validate current user
   useEffect(() => {
-    if (currentUser === null) {
+
+    if(currentUser === null) {
       const token = localStorage.getItem("token");
+
+     
 
       const expired = isTokenExpired(token)
 
@@ -23,12 +27,13 @@ const AppProvider = ({ children }) => {
         const user = localStorage.getItem("user");
 
         if (user) {
-          setCurrentUser(JSON.parse(user));
+          updateUser(JSON.parse(user));
+          console.log("user", JSON.parse(user))
         }
       } else {
         localStorage.removeItem("user");
       }
-    }
+  }
 
   }, [currentUser]);
 
@@ -36,6 +41,19 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     getBlogs();
   }, [])
+
+
+
+
+  const handleEditArticle = (data) => {
+    setEditArticle(data);
+    getBlogs();
+
+    if(data === false) {
+      window.location.href = "/articles";
+    }
+  }
+
 
 
   const getBlogs = async () => {
@@ -56,6 +74,7 @@ const AppProvider = ({ children }) => {
   // update current user
   const updateUser = (user) => {
     setCurrentUser(user)
+    localStorage.setItem("user", JSON.stringify(user));
   }
 
   // logout function
@@ -71,9 +90,11 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider value={{
+      editArticle,
       searched,
       currentUser,
       blogs,
+      handleEditArticle,
       updateUser,
       setSearched,
       logOut,

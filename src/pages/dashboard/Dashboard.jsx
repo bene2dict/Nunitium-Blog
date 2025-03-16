@@ -94,7 +94,7 @@ const Dashboard = () => {
       
       <div className="dashboard-main-board">
 
-        <div className="nav-main">
+        <div className="nav-main-row">
         <span> </span>
           {/* <Link to="/search-page">
             <span className="material-symbols-outlined">search</span>

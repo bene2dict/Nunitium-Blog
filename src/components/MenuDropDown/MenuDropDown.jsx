@@ -58,9 +58,7 @@ const MenuDropDown = () => {
   return (
     <div className="dropdown" ref={dropdownRef}>
       <div className="profile">
-      <Link to="/search-page">
-        <span className="material-symbols-outlined">search</span>
-      </Link>
+      <span></span>
         <span className='material-symbols-outlined' onClick={toggleDropdown}>menu</span>
       </div>
       {isOpen && (

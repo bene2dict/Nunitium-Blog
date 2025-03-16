@@ -1,13 +1,13 @@
-.articles-wrapper .post-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.articles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    width: 70%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 5rem auto;
 }
 @media screen and (max-width: 500px) {
-    .articles-wrapper .post-container {
-        width: 95%;
+    .articles-wrapper {
+        display: flex;
+        flex-direction: column;
     }
 }

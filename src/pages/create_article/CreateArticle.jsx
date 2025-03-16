@@ -8,10 +8,10 @@ import { stripHtml } from "../../utils/stripHtml";
 
 const CreateArticle = () => {
   const [publicId, setPublicId] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [categories, setCategories] = useState([]);
+  const [imageUrl, setImageUrl] = useState("");
 
   const navigate = useNavigate()
 
@@ -37,6 +37,7 @@ const CreateArticle = () => {
     formData.append("title", title);
     formData.append("description", plainDescription);
     formData.append("postImg", imageUrl);
+    formData.append("publicId", publicId)
     
     // Append categories correctly
     categories.forEach((category) => {

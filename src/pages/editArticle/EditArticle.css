@@ -1,15 +1,20 @@
-.create-article-container {
+.edit-article-container {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     box-sizing: border-box;
     padding: 0 1rem;
 }
-.create-article-container h3 {
+.close {
+    color: #1c1c1c;
+    width: 3%;
+}
+.edit-article-container h3 {
     text-align: center;
     font-size: 20px;
     margin: 2rem 0;
 }
-.create-article-container .article-container {
+.edit-article-container .article-container {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -17,7 +22,7 @@
     height: 70vh;
 }
 @media screen and (max-width: 500px) {
-    .create-article-container .article-container {
+    .edit-article-container .article-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -27,7 +32,7 @@
     }
 }
 
-.create-article-container .article-container .img-container {
+.edit-article-container .article-container .img-container {
     background: #1c1c1c;
     width: 30%;
     display: flex;
@@ -36,56 +41,56 @@
     justify-content: center;
 }
 @media screen and (max-width: 1224px) {
-    .create-article-container .article-container .img-container {
+    .edit-article-container .article-container .img-container {
         width: 50%;
     }
 }
 @media screen and (max-width: 500px) {
-    .create-article-container .article-container .img-container {
+    .edit-article-container .article-container .img-container {
         width: 100%;
     }
 }
 
-.create-article-container .article-container .img-container img {
+.edit-article-container .article-container .img-container img {
     width: 150px;
     height: 150px;
 }
 
-.create-article-container .form-container {
+.edit-article-container .form-container {
     display: flex;
     flex-direction: column;
     width: 60%;
     margin: 0 auto;
 }
 @media screen and (max-width: 1224px) {
-    .create-article-container .form-container {
+    .edit-article-container .form-container {
         width: 60%;
     }
 }
 @media screen and (max-width: 500px) {
-    .create-article-container .form-container {
+    .edit-article-container .form-container {
         width: 100%;
         margin: 0;
     }
 }
 
-.create-article-container .form-container form {
+.edit-article-container .form-container form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     height: 100%;
 }
 
-.create-article-container .form-container form label {
+.edit-article-container .form-container form label {
     font-weight: 700;
 }
 
-.create-article-container .form-container form .title {
+.edit-article-container .form-container form .title {
     display: flex;
     flex-direction: column;
 }
 
-.create-article-container .form-container form .title input {
+.edit-article-container .form-container form .title input {
     height: 30px;
     font-size: 16px;
     border: none;
@@ -93,11 +98,11 @@
     outline: none;
 }
 
-.create-article-container .form-container form .title input:focus {
+.edit-article-container .form-container form .title input:focus {
     border-bottom-color: #1c1c1c; 
 }
 
-.create-article-container .form-container form .description {
+.edit-article-container .form-container form .description {
     /* flex: 1; */
     display: flex;
     flex-direction: column;
@@ -128,7 +133,7 @@ form .categories {
     border: 1px solid #1c1c1c !important;
 }
 
-.create-article-container .form-container form > .submit-button button {
+.edit-article-container .form-container form > .submit-button button {
     height: 40px;
     width: 135px;
     font-family: inherit;
@@ -136,4 +141,5 @@ form .categories {
     border-radius: 10px;
     border: 2px solid #1C1C1C;
     cursor: pointer;
+    margin-bottom: 2rem;
 }

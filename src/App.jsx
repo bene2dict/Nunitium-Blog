@@ -14,6 +14,7 @@ import ForgotPassword from "./pages/forgot-password/ForgotPassword"
 import SearchPage from "./pages/SearchPage/SearchPage"
 import '@fontsource/material-symbols-outlined';
 import PrivateLayout from "./layout/protectedLayout/privateLayout"
+import EditArticle from "./pages/editArticle/EditArticle"
 
 
 
@@ -74,10 +75,13 @@ function App() {
           path: "/forgot-password",
           element: <ForgotPassword />
         },
-
         {
           path: "/create-article",
           element: <CreateArticle />
+        },
+        {
+          path: "/edit-article/:id",
+          element: <EditArticle />
         },
       ]
     }

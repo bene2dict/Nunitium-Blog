@@ -59,7 +59,13 @@ const ImageUpload = ({ cloudName, uploadPreset, publicId, setPublicId, setImageU
           />
         </div>
       )}
-      <button onClick={openWidget} className="cloudinary-button">Upload Image</button>
+      <button onClick={openWidget} className="cloudinary-button" style={{
+        height: "40px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#1c1c1c"
+      }}>Upload Image</button>
     </div>
   );
 };

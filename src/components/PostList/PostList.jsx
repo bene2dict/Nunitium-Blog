@@ -20,7 +20,11 @@ const PostList = () => {
             </div>
 
             {featuredArticles && featuredArticles.map(blog => (
-                    <Link to={"/articles/" + blog._id} key={blog._id} style={{ color: "inherit", textDecoration: "none" }}>
+                    <Link to={"/articles/" + blog._id} key={blog._id} style={{ 
+                        color: "inherit", 
+                        textDecoration: "none",
+                        marginBottom: "1rem"
+                         }}>
                 <div className="post-container" >
 
                         <div className="post-image">

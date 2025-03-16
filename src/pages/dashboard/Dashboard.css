@@ -73,11 +73,11 @@
        flex-direction: row;
        justify-content: flex-start;
        /* margin-left: 2rem; */
-       width: 100%;
+       width: 50%;
     }
-    .nav-main div {
+    .nav-main-row {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-end;
         width: 100%;
      }

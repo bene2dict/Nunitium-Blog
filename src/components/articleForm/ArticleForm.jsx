@@ -1,39 +1,58 @@
-// ArticleForm.jsx
 import ReactQuill from "react-quill";
 import PropTypes from "prop-types";
 import "react-quill/dist/quill.snow.css";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+const CATEGORIES = ["Technology", "Health", "Lifestyle"]; // Define available categories
 
 const ArticleForm = ({
   title,
   setTitle,
   description,
   setDescription,
+  categories,
   setCategories,
   handleSubmit,
+  handleUpdate
 }) => {
+  const quillRef = useRef(null);
+  const [selectedCategories, setSelectedCategories] = useState(categories || []);
 
-    const quillRef = useRef(null);
+  const location = useLocation();
+
+  const isCreatePage = location.pathname.split("/").length === 2;
+
+  console.log(isCreatePage);
+
+  // Sync initial categories from props
+  useEffect(() => {
+    setSelectedCategories(categories);
+  }, [categories]);
 
   // Handle checkbox changes for categories
   const handleCategoryChange = (e) => {
     const value = e.target.value;
-    setCategories((prev) =>
+    setSelectedCategories((prev) =>
       e.target.checked
-        ? [...prev, value]
-        : prev.filter((category) => category !== value)
+        ? [...prev, value] // Add category if checked
+        : prev.filter((category) => category !== value) // Remove category if unchecked
     );
   };
 
+  // Update categories in the parent state when selectedCategories changes
+  useEffect(() => {
+    setCategories(selectedCategories);
+  }, [selectedCategories, setCategories]);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={isCreatePage ? handleSubmit : handleUpdate}>
       <div className="title">
         <label htmlFor="title">Title</label>
         <input
           type="text"
           name="title"
-          placeholder="Nuntium is the best"
+          placeholder="Enter article title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
@@ -41,27 +60,32 @@ const ArticleForm = ({
       </div>
       <div className="description">
         <label htmlFor="description">Description</label>
-        <ReactQuill ref={quillRef} theme="snow" value={description} onChange={setDescription} required />
+        <ReactQuill
+          ref={quillRef}
+          theme="snow"
+          value={description}
+          onChange={setDescription}
+          required
+        />
       </div>
       <div className="categories">
         <label>Categories</label>
         <div className="category-checkboxes">
-          <label>
-            <input type="checkbox" value="Technology" onChange={handleCategoryChange} />
-            Technology
-          </label>
-          <label>
-            <input type="checkbox" value="Health" onChange={handleCategoryChange} />
-            Health
-          </label>
-          <label>
-            <input type="checkbox" value="Lifestyle" onChange={handleCategoryChange} />
-            Lifestyle
-          </label>
+          {CATEGORIES.map((category) => (
+            <label key={category}>
+              <input
+                type="checkbox"
+                value={category}
+                checked={selectedCategories.includes(category)}
+                onChange={handleCategoryChange}
+              />
+              {category}
+            </label>
+          ))}
         </div>
       </div>
-      <div className="create-button">
-        <button type="submit">Create</button>
+      <div className="submit-button">
+        <button type="submit">{isCreatePage ? "Submit" : "Update"}</button>
       </div>
     </form>
   );
@@ -73,9 +97,10 @@ ArticleForm.propTypes = {
   setTitle: PropTypes.func.isRequired,
   description: PropTypes.string.isRequired,
   setDescription: PropTypes.func.isRequired,
-  categories: PropTypes.arrayOf(PropTypes.string).isRequired, // Validates as an array of strings
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   setCategories: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  handleUpdate: PropTypes.func.isRequired,
 };
 
 export default ArticleForm;

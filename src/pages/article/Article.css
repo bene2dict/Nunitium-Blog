@@ -1,7 +1,18 @@
+.article-page-wrapper {
 
+}
+.edit-button, .delete-button {
+    cursor: pointer;
+}
+.edit-button {
+    color: #1c1c1c;
+}
+.delete-button {
+    color: red;
+}
 
 .article-desc {
-    width: 40%;
+    width: 80%;
     margin: 3rem auto;
 }
 @media screen and (max-width: 1224px) {
@@ -64,6 +75,7 @@
 .authors-image-and-description img {
     width: 200px;
     height: 200px;
+    border-radius: 50%;
 }
 @media screen and (max-width: 500px) {
     .authors-image-and-description img {
@@ -104,7 +116,7 @@
     width: 100px;
 }
 .next-post img {
-    margin-right: -1rem;
+    margin-right: 0rem;
 }
 .previous-post img {
     margin-left: -1rem;

@@ -10,9 +10,10 @@ const Layout = () => {
 
   return (
     <div className="layout">
-      {dashboardPath === 'dashboard' ||  dashboardPath === "settings" ? "" : <div className="navbar">
+      {dashboardPath === 'dashboard' ||  dashboardPath === "settings" ? "" : 
+      (<div className="navbar">
         <Navbar />
-      </div>
+      </div>)
       }
       <div className="content">
         <Outlet />
