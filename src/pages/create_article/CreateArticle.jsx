@@ -4,7 +4,6 @@ import ArticleForm from "../../components/articleForm/ArticleForm";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
 import "./CreateArticle.css";
 import axiosInstance from "../../utils/axiosInstance";
-import { stripHtml } from "../../utils/stripHtml";
 
 const CreateArticle = () => {
   const [publicId, setPublicId] = useState("");
@@ -31,11 +30,10 @@ const CreateArticle = () => {
       return;
     }
 
-    const plainDescription = stripHtml(description);
   
     const formData = new FormData();
     formData.append("title", title);
-    formData.append("description", plainDescription);
+    formData.append("description", description);
     formData.append("postImg", imageUrl);
     formData.append("publicId", publicId)
     

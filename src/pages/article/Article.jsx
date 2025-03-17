@@ -9,6 +9,7 @@ import AppContext from "../../context/AppContext"
 import moment from "moment";
 import EditArticle from "../editArticle/EditArticle";
 import axiosInstance from "../../utils/axiosInstance";
+import DOMPurify from "dompurify";
 
 
 
@@ -127,9 +128,7 @@ console.log(isBlogAuthor)
             </div>
 
             <div className="desc">
-              <p>
-                {article?.description}
-              </p>
+              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article?.description) }} />
             </div>
 
             <div className="about-the-author">
