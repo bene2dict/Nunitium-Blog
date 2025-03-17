@@ -39,7 +39,8 @@ const Login = () => {
       const response = await axios.post("https://nunitium-blog-backend.onrender.com/api/users/login", data, {
        headers: {
           "Content-Type": "application/json"
-       } 
+       },
+       withCredentials: true
       });
 
       if(!response) {
