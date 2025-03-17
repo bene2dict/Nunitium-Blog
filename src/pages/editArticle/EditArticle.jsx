@@ -43,11 +43,10 @@ const EditArticle = ({ article }) => {
             return;
         }
 
-        const plainDescription = stripHtml(description);
 
         const formData = {
             title,
-            description: plainDescription,
+            description,
             postImg: imageUrl,
             publicId,
             categories,
