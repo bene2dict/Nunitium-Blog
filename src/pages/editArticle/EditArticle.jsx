@@ -4,7 +4,6 @@ import ArticleForm from "../../components/articleForm/ArticleForm";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
 import "./EditArticle.css";
 import axiosInstance from "../../utils/axiosInstance";
-import { stripHtml } from "../../utils/stripHtml";
 import AppContext from "../../context/AppContext";
 
 const EditArticle = ({ article }) => {
