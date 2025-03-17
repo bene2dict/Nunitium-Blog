@@ -16,7 +16,10 @@ import DOMPurify from "dompurify";
 
 const Article = () => {
   const [article, setArticle] = useState({})
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); 
+  const [sanitizedHtml, setSanitizedHtml] = useState("");
+
+ 
 
   // const tablet = useMediaQuery({ query: '(max-width: 1224px)' })
   const bigScreen = useMediaQuery({ query: '(min-width: 1024px)' });
@@ -27,7 +30,7 @@ const Article = () => {
   const { id } = useParams();
 
 
- 
+  
 
 
   const fetchArticle = useCallback(async () => {
@@ -43,6 +46,13 @@ const Article = () => {
       setLoading(false);
     }
   }, [id]);
+
+  useEffect(() => {
+    // Import DOMPurify dynamically to avoid SSR issues
+    import("dompurify").then((DOMPurify) => {
+      setSanitizedHtml(DOMPurify.default.sanitize(article?.description));
+    });
+  }, [article?.description]);
   
   useEffect(() => {
     fetchArticle()
