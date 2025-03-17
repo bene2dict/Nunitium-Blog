@@ -16,11 +16,11 @@ const Login = () => {
     password: ""
   })
 
-  const {updateUser} = useContext(AppContext);
+  const { updateUser } = useContext(AppContext);
 
 
   const navigate = useNavigate();
- 
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -36,11 +36,17 @@ const Login = () => {
 
 
     try {
-      const response = await axios.post("https://nunitium-blog-backend.onrender.com/api/users/login", data);
+      const response = await axios.post("https://nunitium-blog-backend.onrender.com/api/users/login", data, {
+       headers: {
+          "Content-Type": "application/json"
+       } 
+      });
 
-      const result = response.data;
+      if(!response) {
+        console.log("No working")
+      }
+
       if (response) {
-        console.log(result)
         const token = response.data.token;
         const user = response.data.userData;
 
